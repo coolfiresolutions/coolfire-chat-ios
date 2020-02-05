@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OutlinedButton" customModule="RoninChat" customModuleProvider="target">
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="iconImageView" destination="P9Y-aA-BAa" id="mAp-PY-dsp"/>
+                <outlet property="label" destination="yH2-8I-Sit" id="oUm-VD-Nlb"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ab1-Vf-4iA"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="121" height="24"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link Gravatar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yH2-8I-Sit">
+                    <rect key="frame" x="10" y="0.0" width="82" height="24"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Regular" family="Open Sans" pointSize="13"/>
+                    <color key="textColor" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_person" translatesAutoresizingMaskIntoConstraints="NO" id="P9Y-aA-BAa">
+                    <rect key="frame" x="96" y="2" width="20" height="20"/>
+                    <color key="tintColor" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="P9Y-aA-BAa" secondAttribute="height" multiplier="1:1" id="9DN-03-b8J"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RJ-ck-cy8">
+                    <rect key="frame" x="0.0" y="0.0" width="121" height="24"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="touchUpInside:" destination="-1" eventType="touchUpInside" id="dlz-hP-beW"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.054612368350000003" green="0.062462344769999997" blue="0.079081602390000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yH2-8I-Sit" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="4zo-Mv-EY5"/>
+                <constraint firstItem="P9Y-aA-BAa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="7tJ-sC-Kwy"/>
+                <constraint firstAttribute="bottom" secondItem="9RJ-ck-cy8" secondAttribute="bottom" id="8tB-51-fut"/>
+                <constraint firstAttribute="bottom" secondItem="P9Y-aA-BAa" secondAttribute="bottom" constant="2" id="BKc-T6-bSf"/>
+                <constraint firstAttribute="trailing" secondItem="9RJ-ck-cy8" secondAttribute="trailing" id="BMs-Dn-Keg"/>
+                <constraint firstItem="9RJ-ck-cy8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WAO-Xy-8PK"/>
+                <constraint firstAttribute="bottom" secondItem="yH2-8I-Sit" secondAttribute="bottom" id="WxG-q6-Kbr"/>
+                <constraint firstItem="P9Y-aA-BAa" firstAttribute="leading" secondItem="yH2-8I-Sit" secondAttribute="trailing" constant="4" id="cb8-2X-UEJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="P9Y-aA-BAa" secondAttribute="trailing" constant="5" id="e2e-K3-E2x"/>
+                <constraint firstItem="P9Y-aA-BAa" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="iJc-4b-Zup"/>
+                <constraint firstItem="9RJ-ck-cy8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iL6-uV-kRE"/>
+                <constraint firstItem="yH2-8I-Sit" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="mm5-wH-6Da"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-164.49275362318841" y="265.17857142857144"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_person" width="33" height="33"/>
+    </resources>
+</document>

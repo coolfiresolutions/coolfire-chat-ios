@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TableStatusView" customModule="RoninChat" customModuleProvider="target">
+            <connections>
+                <outlet property="imageView" destination="yZI-Rj-SeM" id="kfd-lz-gm5"/>
+                <outlet property="label" destination="dul-5U-OQH" id="7R2-Jv-5RV"/>
+                <outlet property="view" destination="iN0-l3-epB" id="65O-Lz-sVK"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_nochat" translatesAutoresizingMaskIntoConstraints="NO" id="yZI-Rj-SeM">
+                    <rect key="frame" x="0.0" y="0.0" width="175" height="140"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start the conversation!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dul-5U-OQH">
+                    <rect key="frame" x="0.0" y="121" width="175" height="19"/>
+                    <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
+                    <color key="textColor" red="0.87833553552627563" green="0.87848657369613647" blue="0.87832605838775635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="yZI-Rj-SeM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Chx-0u-8PE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="dul-5U-OQH" secondAttribute="bottom" id="G1Z-Ow-TyB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="dul-5U-OQH" secondAttribute="trailing" id="Ltc-30-Bii"/>
+                <constraint firstItem="dul-5U-OQH" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Pc8-zq-2wb"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yZI-Rj-SeM" secondAttribute="trailing" id="dX6-3n-mPu"/>
+                <constraint firstItem="yZI-Rj-SeM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eX1-m1-j3h"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="yZI-Rj-SeM" secondAttribute="bottom" id="ynv-41-a9Y"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="60.14492753623189" y="-99.776785714285708"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img_nochat" width="645" height="360"/>
+    </resources>
+</document>

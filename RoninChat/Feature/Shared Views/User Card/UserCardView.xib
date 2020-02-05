@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+        <array key="Raleway-Regular.ttf">
+            <string>Raleway-Regular</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserCardView" customModule="RoninChat" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarView" destination="1t4-il-AGp" id="Irk-jP-P6U"/>
+                <outlet property="button" destination="agj-oW-eaM" id="WkM-gA-C0z"/>
+                <outlet property="emailLabel" destination="jt4-EE-AyL" id="Edg-t2-rRu"/>
+                <outlet property="nameLabel" destination="FdY-eL-dCF" id="EtN-dk-7DX"/>
+                <outlet property="onlineStatusLabel" destination="X23-cM-hDe" id="yX4-aq-vn2"/>
+                <outlet property="onlineStatusLabelLeadingConstraintToOnlineStatusView" destination="AzM-JT-NjO" id="ZNB-E5-DO2"/>
+                <outlet property="onlineStatusView" destination="qgu-H0-fjz" id="hcs-JE-z9O"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rfY-zD-1RV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="142"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1t4-il-AGp" customClass="AvatarView" customModule="RoninChat" customModuleProvider="target">
+                    <rect key="frame" x="24" y="16" width="96" height="96"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1t4-il-AGp" secondAttribute="height" multiplier="1:1" id="Jyk-yJ-Zxo"/>
+                    </constraints>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgu-H0-fjz" customClass="RoundedView" customModule="RoninChat" customModuleProvider="target">
+                    <rect key="frame" x="144" y="16" width="12" height="12"/>
+                    <color key="backgroundColor" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qgu-H0-fjz" secondAttribute="height" multiplier="1:1" id="hT5-QI-tUj"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Online" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X23-cM-hDe">
+                    <rect key="frame" x="164" y="14" width="234" height="16"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="John Smith" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdY-eL-dCF">
+                    <rect key="frame" x="144" y="34" width="254" height="25"/>
+                    <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="21"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="john.smith@mail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jt4-EE-AyL">
+                    <rect key="frame" x="144" y="63" width="254" height="19"/>
+                    <fontDescription key="fontDescription" name="Raleway-Regular" family="Raleway" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="agj-oW-eaM" customClass="OutlinedButton" customModule="RoninChat" customModuleProvider="target">
+                    <rect key="frame" x="144" y="90" width="144" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Bcn-ef-bZ7"/>
+                        <constraint firstAttribute="width" constant="144" id="RDg-Mq-27i"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Direct Message"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="labelTextColor">
+                            <color key="value" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="ic_send"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="imageTint">
+                            <color key="value" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="viewBackgroundColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="znC-co-XcZ"/>
+                    </connections>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="X23-cM-hDe" firstAttribute="centerY" secondItem="qgu-H0-fjz" secondAttribute="centerY" id="0xz-TW-U42"/>
+                <constraint firstItem="FdY-eL-dCF" firstAttribute="leading" secondItem="1t4-il-AGp" secondAttribute="trailing" constant="24" id="1Uf-Fb-Teb"/>
+                <constraint firstItem="X23-cM-hDe" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="16:142" id="2vr-Jq-c2J"/>
+                <constraint firstItem="agj-oW-eaM" firstAttribute="leading" secondItem="1t4-il-AGp" secondAttribute="trailing" constant="24" id="4rw-2z-7TK"/>
+                <constraint firstItem="qgu-H0-fjz" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="12:142" id="7C4-nl-TuG"/>
+                <constraint firstAttribute="trailing" secondItem="X23-cM-hDe" secondAttribute="trailing" constant="16" id="7VE-oU-uz7"/>
+                <constraint firstItem="1t4-il-AGp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="8GE-AW-osL"/>
+                <constraint firstItem="JNb-26-jgH" firstAttribute="trailing" secondItem="FdY-eL-dCF" secondAttribute="trailing" constant="16" id="9lw-dz-9F7"/>
+                <constraint firstItem="X23-cM-hDe" firstAttribute="leading" secondItem="qgu-H0-fjz" secondAttribute="trailing" constant="8" id="AzM-JT-NjO"/>
+                <constraint firstItem="FdY-eL-dCF" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="25:142" id="Cg6-bi-uVU"/>
+                <constraint firstItem="jt4-EE-AyL" firstAttribute="leading" secondItem="1t4-il-AGp" secondAttribute="trailing" constant="24" id="EU7-sh-BdU"/>
+                <constraint firstItem="FdY-eL-dCF" firstAttribute="top" secondItem="X23-cM-hDe" secondAttribute="bottom" constant="4" id="FpT-Ab-7ZF"/>
+                <constraint firstItem="1t4-il-AGp" firstAttribute="leading" secondItem="JNb-26-jgH" secondAttribute="leading" constant="24" id="IbQ-pM-73X"/>
+                <constraint firstItem="agj-oW-eaM" firstAttribute="top" secondItem="jt4-EE-AyL" secondAttribute="bottom" constant="8" id="K5r-D5-ylb"/>
+                <constraint firstItem="1t4-il-AGp" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="48:71" id="Pcw-Wz-tgZ"/>
+                <constraint firstItem="jt4-EE-AyL" firstAttribute="top" secondItem="FdY-eL-dCF" secondAttribute="bottom" constant="4" id="SDy-Pf-SRC"/>
+                <constraint firstItem="jt4-EE-AyL" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="19:142" id="WrE-KC-Bn9"/>
+                <constraint firstItem="qgu-H0-fjz" firstAttribute="leading" secondItem="1t4-il-AGp" secondAttribute="trailing" constant="24" id="aiO-uB-t0a"/>
+                <constraint firstItem="X23-cM-hDe" firstAttribute="leading" secondItem="1t4-il-AGp" secondAttribute="trailing" priority="750" constant="24" id="am6-vW-Riu"/>
+                <constraint firstItem="qgu-H0-fjz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="hm2-Ck-BcE"/>
+                <constraint firstItem="JNb-26-jgH" firstAttribute="trailing" secondItem="jt4-EE-AyL" secondAttribute="trailing" constant="16" id="uRe-xt-EsB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="JNb-26-jgH"/>
+            <point key="canvasLocation" x="137.68115942028987" y="95.758928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_send" width="33" height="33"/>
+    </resources>
+</document>

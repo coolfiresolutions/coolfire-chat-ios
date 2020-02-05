@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-SemiBold.ttf">
+            <string>OpenSans-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoaderView" customModule="RoninChat" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingLabel" destination="M9G-kg-JCe" id="vCQ-Cm-a51"/>
+                <outlet property="view" destination="iN0-l3-epB" id="TUu-Po-mPI"/>
+                <outlet property="webView" destination="qjP-pc-s9x" id="3E4-yb-5y2"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="176" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qjP-pc-s9x">
+                    <rect key="frame" x="0.0" y="0.0" width="176" height="120.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qjP-pc-s9x" secondAttribute="height" multiplier="35:24" id="EV7-xv-rUX"/>
+                    </constraints>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9G-kg-JCe">
+                    <rect key="frame" x="0.0" y="131" width="176" height="29"/>
+                    <fontDescription key="fontDescription" name="OpenSans-SemiBold" family="Open Sans" pointSize="21"/>
+                    <color key="textColor" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <accessibility key="accessibilityConfiguration">
+                <accessibilityTraits key="traits" notEnabled="YES"/>
+            </accessibility>
+            <constraints>
+                <constraint firstItem="qjP-pc-s9x" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Dqd-WE-Mv1"/>
+                <constraint firstItem="qjP-pc-s9x" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="R0Q-Bu-M50"/>
+                <constraint firstItem="M9G-kg-JCe" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="Y2n-ta-oWl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="M9G-kg-JCe" secondAttribute="trailing" id="lzI-PZ-wuX"/>
+                <constraint firstItem="M9G-kg-JCe" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="nxv-p2-4Qq"/>
+                <constraint firstItem="qjP-pc-s9x" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="tgX-wi-jEK"/>
+                <constraint firstItem="M9G-kg-JCe" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="y4z-C7-bgi"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="139" y="154"/>
+        </view>
+    </objects>
+</document>

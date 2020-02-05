@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AvatarCollectionViewCell" id="kV8-RC-Lqp" customClass="AvatarCollectionViewCell" customModule="RoninChat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fSR-TW-YOX" userLabel="Content View">
+                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJ1-gf-BQK" customClass="AvatarView" customModule="RoninChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BJ1-gf-BQK" secondAttribute="height" multiplier="1:1" id="pKi-mU-ReY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="circular" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="BJ1-gf-BQK" firstAttribute="centerX" secondItem="fSR-TW-YOX" secondAttribute="centerX" id="A0j-mG-2BK"/>
+                            <constraint firstItem="BJ1-gf-BQK" firstAttribute="height" secondItem="fSR-TW-YOX" secondAttribute="height" id="GFw-Z1-33L"/>
+                            <constraint firstItem="BJ1-gf-BQK" firstAttribute="centerY" secondItem="fSR-TW-YOX" secondAttribute="centerY" id="QWj-se-2e3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nXN-Tw-4Bb"/>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fSR-TW-YOX" secondAttribute="trailing" id="Tvd-rJ-fZS"/>
+                <constraint firstItem="fSR-TW-YOX" firstAttribute="leading" secondItem="kV8-RC-Lqp" secondAttribute="leading" id="dgK-KD-fJN"/>
+                <constraint firstAttribute="bottom" secondItem="fSR-TW-YOX" secondAttribute="bottom" id="jen-4f-g0S"/>
+                <constraint firstItem="fSR-TW-YOX" firstAttribute="top" secondItem="kV8-RC-Lqp" secondAttribute="top" id="rpC-Pb-e8h"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="9UL-0Z-w2m"/>
+            <connections>
+                <outlet property="avatarView" destination="BJ1-gf-BQK" id="vel-uq-nAy"/>
+            </connections>
+            <point key="canvasLocation" x="360" y="-80"/>
+        </collectionViewCell>
+    </objects>
+</document>

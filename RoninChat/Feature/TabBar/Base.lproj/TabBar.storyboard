@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Messages-->
+        <scene sceneID="4Uv-eD-zIx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Messages" id="6Iq-IS-wcq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="CFb-cX-0lA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgr-yk-xxM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582" y="-33"/>
+        </scene>
+        <!--Channels-->
+        <scene sceneID="ZKo-fP-bL6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Channels" id="xPe-wE-1kJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="as9-nj-sKL"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmh-nW-fYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="579" y="0.0"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="1dz-HD-0qw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="H17-6f-Zmd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="BvI-44-JOj"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wo9-5a-W3M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="575" y="33"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" customClass="TabBarController" customModule="RoninChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" translucent="NO" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.16789638996124268" green="0.18750953674316406" blue="0.22905030846595764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.70331984758377075" green="0.93770813941955566" blue="0.69755011796951294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6Iq-IS-wcq" kind="relationship" relationship="viewControllers" id="kbW-ah-aTs"/>
+                        <segue destination="xPe-wE-1kJ" kind="relationship" relationship="viewControllers" id="VNs-vj-Vhy"/>
+                        <segue destination="H17-6f-Zmd" kind="relationship" relationship="viewControllers" id="V41-fY-fSY"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+</document>

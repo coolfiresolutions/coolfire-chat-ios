@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3db-vr-F2q">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Custom Alert View-->
+        <scene sceneID="7iD-aV-k11">
+            <objects>
+                <viewController storyboardIdentifier="CustomAlertView" id="3db-vr-F2q" customClass="CustomAlertView" customModule="RoninChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vc9-aV-Vaz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKZ-gG-64u" customClass="RoundedView" customModule="RoninChat" customModuleProvider="target">
+                                <rect key="frame" x="43" y="398" width="328" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete this conversation?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdP-lh-2Ix">
+                                        <rect key="frame" x="16" y="16" width="296" height="22"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe5-8M-bIW">
+                                        <rect key="frame" x="92" y="54" width="64" height="31"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
+                                        <color key="tintColor" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="CANCEL"/>
+                                        <connections>
+                                            <action selector="leftActionTapped:" destination="3db-vr-F2q" eventType="touchUpInside" id="TnR-J5-3MS"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2m-UX-Q8E">
+                                        <rect key="frame" x="172" y="54" width="60" height="31"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="16"/>
+                                        <color key="tintColor" red="0.70331984759999999" green="0.93770813939999997" blue="0.697550118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="DELETE"/>
+                                        <connections>
+                                            <action selector="rightActionTapped:" destination="3db-vr-F2q" eventType="touchUpInside" id="vV7-aV-t9p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.16789638996124268" green="0.18750953674316406" blue="0.22905030846595764" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="0D1-v8-v8W"/>
+                                    <constraint firstItem="HdP-lh-2Ix" firstAttribute="leading" secondItem="RKZ-gG-64u" secondAttribute="leading" constant="16" id="0Fi-Sc-YSg"/>
+                                    <constraint firstItem="O2m-UX-Q8E" firstAttribute="top" secondItem="HdP-lh-2Ix" secondAttribute="bottom" constant="16" id="2H0-SX-Qfk"/>
+                                    <constraint firstAttribute="trailing" secondItem="HdP-lh-2Ix" secondAttribute="trailing" constant="16" id="7uV-jn-A4v"/>
+                                    <constraint firstItem="qe5-8M-bIW" firstAttribute="top" secondItem="HdP-lh-2Ix" secondAttribute="bottom" constant="16" id="8w2-u9-dRh"/>
+                                    <constraint firstItem="HdP-lh-2Ix" firstAttribute="top" secondItem="RKZ-gG-64u" secondAttribute="top" constant="16" id="CvA-2I-L8b"/>
+                                    <constraint firstItem="O2m-UX-Q8E" firstAttribute="leading" secondItem="RKZ-gG-64u" secondAttribute="centerX" constant="8" id="ZcC-CX-Dsm"/>
+                                    <constraint firstAttribute="height" constant="100" id="kaB-D0-Eev"/>
+                                    <constraint firstAttribute="centerX" secondItem="qe5-8M-bIW" secondAttribute="trailing" constant="8" id="vK4-ff-N1R"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RKZ-gG-64u" firstAttribute="centerY" secondItem="vc9-aV-Vaz" secondAttribute="centerY" id="EZ7-XS-5X7"/>
+                            <constraint firstItem="RKZ-gG-64u" firstAttribute="centerX" secondItem="vc9-aV-Vaz" secondAttribute="centerX" id="Zm3-HH-4Ga"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lc9-ec-7Tc"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="RKZ-gG-64u" id="beo-KZ-a19"/>
+                        <outlet property="leftButton" destination="qe5-8M-bIW" id="76r-cV-Dol"/>
+                        <outlet property="rightButton" destination="O2m-UX-Q8E" id="VKG-eq-FqT"/>
+                        <outlet property="titleLabel" destination="HdP-lh-2Ix" id="SBv-z4-TFx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qyO-yY-Md3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515.94202898550725" y="-239.0625"/>
+        </scene>
+    </scenes>
+</document>
